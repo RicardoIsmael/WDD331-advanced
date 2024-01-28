@@ -1,0 +1,122 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 23em;
+  height: auto;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: Helvetica, sans-serif;
+  color: #333;
+}
+
+a {
+  text-decoration: none;
+}
+
+h1 * {
+  width: fit-content;
+  font-family: Lora, sans-serif;
+  font-size: 70px;
+  color: #333;
+  padding: 25px 10px;
+}
+
+h1 {
+  text-align: center;
+}
+
+h2 * {
+  font-size: 30px;
+  font-family: Lora, sans-serif;
+  padding: 10px 0;
+  color: #333;
+  opacity: 0.8;
+}
+
+/*==============NESTING==========*/
+nav ul {
+  list-style: none;
+  display: list-item;
+  text-align: center;
+  text-transform: uppercase;
+  border-top: 2px solid #d0d0d0;
+  opacity: 0.8;
+}
+nav li {
+  padding: 6px;
+}
+nav li a {
+  color: #666;
+}
+nav li a:hover {
+  color: #00ddff;
+}
+nav li a:active {
+  color: #ded887;
+}
+
+/*=========MIXIN===============*/
+.post-date {
+  font-size: 25px;
+  font-family: Lora, Helvetica, sans-serif;
+  text-transform: uppercase;
+  text-align: right;
+  padding: 40px 5px 10px 5px;
+  border-top: 2px solid #d0d0d0;
+  border-bottom: 2px solid #d0d0d0;
+}
+
+figure img {
+  display: block;
+  align-self: center;
+  margin: auto;
+  padding: 25px 0;
+}
+
+@media (min-width: 45em) {
+  body {
+    width: 62.5em;
+    height: auto;
+  }
+  h1 * {
+    padding: 40px 0;
+    font-size: 90px;
+  }
+  /*====nesting===*/
+  nav ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+    border-top: 2px solid #d0d0d0;
+    border-bottom: 2px solid #d0d0d0;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding: 4px;
+    font-size: 24px;
+  }
+  .post-date {
+    border-top: none;
+    border-bottom: none;
+    border-right: 2px solid #d0d0d0;
+    padding: 35px 10px;
+  }
+  article {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 8px;
+  }
+  .post-content {
+    border-top: none;
+    border-bottom: 1px dotted #d0d0d0;
+    padding: 30px 0;
+  }
+}
+
+/*# sourceMappingURL=styles.css.map */
